@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css practice</title>
+	<style type="text/css">
+/*div {position: absolute;}*/
+		.myBoxes{
+			position: absolute;
+			width:150px;
+			height:150px;
+			background-color: steelblue;
+			border: 1px solid grey;
+			color:white ;
+			opacity: 0.5;
+		}
+		.myBox{
+			position: absolute;
+			opacity:1;
+			background-color: coral;
+			width: 150px;
+			height:150px;
+			z-index:1;
+			border:1px solid black;
+			animation: mymove 3s infinite linear;
+		}
+
+		@keyframes mymove{
+			50% {z-index:6};
+		}
+	</style>
+</head>
+<body style="position:absolute;">
+
+	<div class="container">
+		<div class="myBox">Moving Box...</div>
+		<div class="myBoxes" style="top:20px;left:20px;z-index:1;">box-1</div>
+		<div class="myBoxes" style="top:40px;left:40px;z-index:2;">box-2</div>
+		<div class="myBoxes" style="top:60px;left:60px;z-index:3;">box-3</div>
+		<div class="myBoxes" style="top:80px;left:80px;z-index:4;">box-4</div>
+		<div class="myBoxes" style="top:100px;left:100px;z-index:5;">box-5</div>
+	</div>
+</body>
+</html>

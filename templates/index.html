@@ -1,0 +1,215 @@
+<!doctype html5>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,100,400,300,600,700,800">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../css/app.css">
+	<link rel="stylesheet" type="text/css" href="../css/checkbox.css">
+  <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="../css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="../css/cs-select.css" />
+  <link rel="stylesheet" type="text/css" href="../css/cs-skin-underline.css" />
+  <link rel="stylesheet" type="text/css" href="../css/subMenu.css" />
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Digi-100</title>
+</head>
+<body>
+	<div class="covering">
+	  <div class="progress">
+	    <div class="progress-bar" style="width: 0;"> <span class="sr-only">60% Complete</span> </div>
+	  </div>
+  <h1 class="h1-header animated bounceInLeft"> <strong>test-100</strong></h1>
+  <div class="container-fluid table-class">
+    <div class="black " >
+      <div class="inner cover">
+        <div class="centerUp">
+          <div class="questionaire">
+            <div class="wrapper">
+              <div id="userText">
+                <h2>Mark!</h2>
+                <p>Login date : 11/13/2018</p> 
+              </div>               
+              <img src="https://i.kinja-img.com/gawker-media/image/upload/gd8ljenaeahpn0wslmlz.jpg" class="image--cover">
+            </div>
+            <form>
+              <ul class="progress-form">
+              	<li class="form-group animated fadeInRightBig  activate" data-color="#E1523D" data-percentage="20%">
+                  <label for="nameInput">
+                  <h1>Welcome Mark!</h1>
+                  	What would you like to do?
+                  </label>
+                  <br><br>
+                  <input type="checkbox" id="toggle-1" class="technologyClass">      
+                	<label for="toggle-1" class="label-check-box"></label>
+									<span class="span-check-box">Create a Project</span>
+									<br>
+									<input type="checkbox" id="toggle-2" class="technologyClass">      
+                	<label for="toggle-2" class="label-check-box"></label>
+									<span class="span-check-box">Training Project</span>
+									<br>
+									<input type="checkbox" id="toggle-3" class="technologyClass">      
+                	<label for="toggle-3" class="label-check-box"></label>
+									<span class="span-check-box">Quick schedule</span>
+									<br>
+									<input type="checkbox" id="toggle-4" class="technologyClass">      
+                	<label for="toggle-4" class="label-check-box"></label>
+									<span class="span-check-box">Manage Account</span>									 
+                </li>
+
+                <li class="form-group animated hide  inactive" data-color="#E1523D" data-percentage="20%">
+                  <label for="nameInput">
+                  <h1>Ok, Mark!</h1>
+                  Let's get this started.
+                  </label>
+                  <input type="text" class="form-control getName" id="q1" placeholder="Name of the Project"  required="required"/>
+                </li>
+                <li class="form-group animated hide" data-color="#7C6992"  data-percentage="40%">
+                  <label for="exampleInputEmail1">
+                  <h1>Collecting Details for, <span class="cName">parnter</span>!</h1>
+                  We ask details about the project to give you better service.
+                  </label>
+                  <input type="text" class="form-control" id="q2" placeholder="Number of resources" required="required"/>
+                </li>
+                <li class="form-group animated hide" data-color="#00AF66"  data-percentage="60%">
+                  <label for="exampleInputEmail1">
+                  <h1>Now let's talk what kind of resources you want.</h1>
+                  Selection of technology and any desired/ preferred quality can be added here. 
+                  </label>
+                  <!-- Dropdown of technology -->
+                  <section>
+                    <button type="button" class="btn btn-xs btn-danger help pull-right" style="margin:5px 0; border-radius: 36px; padding: 3px 10px;" data-toggle="popover" data-placement="top" title="What's the big idea?" data-content="It's important to know all of your evironments (PEST).  Don't just assume you know your them, you need research to back it up">?</button>
+                    <select class="cs-select cs-skin-underline" onchange="selectedTechnology()">
+                      <option value="" disabled selected>Choose Technology</option>
+                      <option value="1">Java Script</option>
+                      <option value="2">Python</option>
+                      <option value="3">Hadoop</option>
+                      <option value="4">Java</option>
+                      <option value="5">Ruby on Rails</option>
+                    </select>
+                  </section>
+                  <!-- <textarea class="form-control" id="q3"  required/></textarea> -->
+                  
+                </li>
+                <li class="form-group animated hide" data-color="#00AF66"  data-percentage="80%">
+                  <label for="exampleInputEmail1">
+                  <h1>Now, Let's get into little more details</h1>
+                  Please select the sub categories...
+                  </label>
+                  <!-- <nav>
+                    <ul>
+                      <ol>
+                          <a href="#">Front-End</a>
+                          <ul>
+                              <ol><a href="#">Angular</a></ol>
+                              <ol><a href="#">React</a></ol>
+                              <ol><a href="#">Vue</a></ol>  
+                          </ul>
+                      </ol>
+                      <ol>
+                          <a href="#">Back-End</a>
+                          <ul>
+                              <ol><a href="#">Node</a></ol>                    
+                          </ul>
+                      </ol>
+                      <ol>
+                        <a href="#">Testing</a>
+                        <ul>
+                            <ol><a href="#">Jasmine</a></ol>
+                            <ol><a href="#">Protractor</a></ol>  
+                        </ul>
+                      </ol>
+                    </ul>
+                  </nav> -->
+                  <section class="subTechnology">
+                    <select class="cs-select cs-skin-underline">
+                      <option value="" disabled selected>Front-End</option>
+                      <option value="1">Angular</option>
+                      <option value="2">React</option>
+                      <option value="3">Vue</option>                      
+                    </select>
+                  </section>
+                  <section class="subTechnology">
+                    <select class="cs-select cs-skin-underline">
+                      <option value="" disabled selected>Back-End</option>
+                      <option value="1">Node</option>                     
+                    </select>
+                  </section>
+                  <section class="subTechnology">
+                    <select class="cs-select cs-skin-underline">
+                      <option value="" disabled selected>Testing</option>
+                      <option value="1">Jasmine</option>
+                      <option value="2">Protractor</option>
+                      <option value="3">Mocha</option>                      
+                    </select>
+                  </section>
+
+                  <input type="checkbox" id="toggle-5" class="subTechnologyClass">      
+                  <label for="toggle-5" class="subTechnologyClass label-check-box"></label>
+                  <span class="span-check-box">Have a suggestion to say?</span>
+                  <br>
+                  <textarea class="form-control" id="q4" placeholder="If you have any special requirements, Update here." required/></textarea>
+                  <br><br><br>
+                </li>
+                <!-- <li class="form-group animated hide" data-color="#00AF66"  data-percentage="100%">
+                  <label for="exampleInputEmail1">
+                  <h1>Let's talk big idea</h1>
+                  Why are you doing this and why does the customer need you?
+                  </label>
+                  <textarea class="form-control" id="q5" placeholder="These are the tough questions" required/></textarea>
+                </li> -->
+                <li class="form-group animated hide scrollable" data-color="#00AF66"  data-percentage="100%">
+                  <h3>Please Review Your Answers (click on any of them to edit):</h3>
+                  <div class=" editable">
+                    <div class="break answer1" contenteditable="true"></div>
+                    <div class="break answer2" contenteditable="true"></div>
+                    <div class="break answer3" contenteditable="true"></div>
+                    <div class="break answer4" contenteditable="true"></div>
+                    <div class="break answer5" contenteditable="true"></div>
+                  </div>
+                </li>
+              </ul>
+            </form>
+          </div>
+          <div class="count"><span class="img_cnt"></span> / <span class="img_amt"></span></div>
+          <button class="btn btn-default btn-lg nxt animated hide" >Next <span class="icon-next"></span></button>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <form >
+      <input hidden="" class="answer1" style="color:#444"/>
+      <input hidden="" class="answer2" style="color:#444"/>
+      <input hidden="" class="answer3" style="color:#444"/>
+      <input hidden="" class="answer4" style="color:#444"/>
+      <input hidden="" class="answer5" style="color:#444"/>
+      <input type="submit" class="btn btn-default btn-lg hide submit" value="Ready to Send"/>
+    </form>
+  </div>
+</div>
+</div>
+<div class="animated thanks hide">
+  <h1 style="font-weight:100; font-size:48px; width: 80%; margin: 0 auto;">Thanks for the submission Mark. We'll notify you with some plans based on your needs.</h1>
+  <form action="">
+    <button class="btn btn-lg btn-success" style="margin:20px;" >Let's go play</button>
+  </form>
+</div>
+		<script type="text/javascript" src="../scripts/app.js"></script>
+    <script src="../scripts/classie.js"></script>
+    <script src="../scripts/selectFx.js"></script>
+    <script>
+      (function() {
+        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
+          new SelectFx(el);
+        } );
+      })();
+    </script>
+</body>
+</html>

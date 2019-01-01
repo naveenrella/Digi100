@@ -1,0 +1,60 @@
+
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked + label {
+  background: #009688;
+  border-color: #009688;
+}
+input[type="checkbox"]:checked + label:after {
+  transform: scale(1.3);
+}
+
+.label-check-box {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  background: #ccc;
+  border: 5px solid #7a7a7a;
+  border-radius: 10%;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+}
+ 
+.span-check-box{
+  font-size: 24px;
+  position: relative;
+  top: -20px;
+  left: 10px;
+}
+.label-check-box:before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 300%;
+  width: 300%;
+  top: -100%;
+  left: -100%;
+  z-index: -1;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.label-check-box:after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: url('https://cbwconline.com/IMG/Codepen/Check.svg') center center no-repeat;  
+  background-size: contain;
+  transform: scale(0);
+  transition: 0.2s;
+}
+.label-check-box:active:before {
+  background: #bfbfbf;
+}
+
+
+.subTechnologyClass{
+  margin-top: 15%;
+}
