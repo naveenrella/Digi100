@@ -26,24 +26,25 @@
 	  <div class="progress">
 	    <div class="progress-bar" style="width: 0;"> <span class="sr-only">60% Complete</span> </div>
 	  </div>
-  <h1 class="h1-header animated bounceInLeft"> <strong>test-100</strong></h1>
+  <h1 class="h1-header animated bounceInLeft"> <strong>Digi-100</strong></h1>
   <div class="container-fluid table-class">
     <div class="black " >
       <div class="inner cover">
         <div class="centerUp">
           <div class="questionaire">
+            <img src="https://i.kinja-img.com/gawker-media/image/upload/gd8ljenaeahpn0wslmlz.jpg" class="image--cover" alt="profile picture" >
             <div class="wrapper">
-              <div id="userText">
-                <h2>Mark!</h2>
-                <p>Login date : 11/13/2018</p> 
-              </div>               
-              <img src="https://i.kinja-img.com/gawker-media/image/upload/gd8ljenaeahpn0wslmlz.jpg" class="image--cover">
+                <div id="userText">
+                  <span class="userName"></span>!   
+                  <p id="loginDate">Login date : 11/13/2018</p> 
+                </div>
+              </img>
             </div>
             <form>
               <ul class="progress-form">
               	<li class="form-group animated fadeInRightBig  activate" data-color="#E1523D" data-percentage="20%">
                   <label for="nameInput">
-                  <h1>Welcome Mark!</h1>
+                  <h1>Welcome <span class="userName"></span>!</h1>
                   	What would you like to do?
                   </label>
                   <br><br>
@@ -51,22 +52,22 @@
                 	<label for="toggle-1" class="label-check-box"></label>
 									<span class="span-check-box">Create a Project</span>
 									<br>
-									<input type="checkbox" id="toggle-2" class="technologyClass">      
+									<input type="checkbox" disabled="true" id="toggle-2" class="technologyClass">      
                 	<label for="toggle-2" class="label-check-box"></label>
 									<span class="span-check-box">Training Project</span>
 									<br>
-									<input type="checkbox" id="toggle-3" class="technologyClass">      
+									<input type="checkbox" disabled="true" id="toggle-3" class="technologyClass">      
                 	<label for="toggle-3" class="label-check-box"></label>
 									<span class="span-check-box">Quick schedule</span>
 									<br>
-									<input type="checkbox" id="toggle-4" class="technologyClass">      
+									<input type="checkbox" disabled="true" id="toggle-4" class="technologyClass">      
                 	<label for="toggle-4" class="label-check-box"></label>
 									<span class="span-check-box">Manage Account</span>									 
                 </li>
 
                 <li class="form-group animated hide  inactive" data-color="#E1523D" data-percentage="20%">
                   <label for="nameInput">
-                  <h1>Ok, Mark!</h1>
+                  <h1>Ok,<span class="userName"></span>!</h1>
                   Let's get this started.
                   </label>
                   <input type="text" class="form-control getName" id="q1" placeholder="Name of the Project"  required="required"/>
@@ -74,7 +75,7 @@
                 <li class="form-group animated hide" data-color="#7C6992"  data-percentage="40%">
                   <label for="exampleInputEmail1">
                   <h1>Collecting Details for, <span class="cName">parnter</span>!</h1>
-                  We ask details about the project to give you better service.
+                  We ask details about the project to give you better service. How many resources are you planning to hire for <span class="cName">parnter</span>!
                   </label>
                   <input type="text" class="form-control" id="q2" placeholder="Number of resources" required="required"/>
                 </li>
@@ -85,14 +86,14 @@
                   </label>
                   <!-- Dropdown of technology -->
                   <section>
-                    <button type="button" class="btn btn-xs btn-danger help pull-right" style="margin:5px 0; border-radius: 36px; padding: 3px 10px;" data-toggle="popover" data-placement="top" title="What's the big idea?" data-content="It's important to know all of your evironments (PEST).  Don't just assume you know your them, you need research to back it up">?</button>
-                    <select class="cs-select cs-skin-underline" onchange="selectedTechnology()">
+                    <button type="button" class="btn btn-xs btn-danger help pull-right" style="margin:5px 0; border-radius: 36px; padding: 3px 10px;" data-toggle="popover" data-placement="top" title="Please call our help-desk if you don't find the technology down here...">?</button>
+                    <select class="cs-select cs-skin-underline" id="q3" >
                       <option value="" disabled selected>Choose Technology</option>
-                      <option value="1">Java Script</option>
-                      <option value="2">Python</option>
-                      <option value="3">Hadoop</option>
-                      <option value="4">Java</option>
-                      <option value="5">Ruby on Rails</option>
+                      <option value="Java Script">Java Script</option>
+                      <option value="Python">Python</option>
+                      <option value="Hadoop">Hadoop</option>
+                      <option value="Java">Java</option>
+                      <option value="Ruby on Rails">Ruby on Rails</option>
                     </select>
                   </section>
                   <!-- <textarea class="form-control" id="q3"  required/></textarea> -->
@@ -102,52 +103,27 @@
                   <label for="exampleInputEmail1">
                   <h1>Now, Let's get into little more details</h1>
                   Please select the sub categories...
-                  </label>
-                  <!-- <nav>
-                    <ul>
-                      <ol>
-                          <a href="#">Front-End</a>
-                          <ul>
-                              <ol><a href="#">Angular</a></ol>
-                              <ol><a href="#">React</a></ol>
-                              <ol><a href="#">Vue</a></ol>  
-                          </ul>
-                      </ol>
-                      <ol>
-                          <a href="#">Back-End</a>
-                          <ul>
-                              <ol><a href="#">Node</a></ol>                    
-                          </ul>
-                      </ol>
-                      <ol>
-                        <a href="#">Testing</a>
-                        <ul>
-                            <ol><a href="#">Jasmine</a></ol>
-                            <ol><a href="#">Protractor</a></ol>  
-                        </ul>
-                      </ol>
-                    </ul>
-                  </nav> -->
+                  </label>                  
                   <section class="subTechnology">
-                    <select class="cs-select cs-skin-underline">
+                    <select id="frontEnd" class="cs-select cs-skin-underline" id="frontEnd">
                       <option value="" disabled selected>Front-End</option>
-                      <option value="1">Angular</option>
-                      <option value="2">React</option>
-                      <option value="3">Vue</option>                      
+                      <option value="Angular">Angular</option>
+                      <option value="React">React</option>
+                      <option value="Vue">Vue</option>                      
                     </select>
                   </section>
                   <section class="subTechnology">
-                    <select class="cs-select cs-skin-underline">
+                    <select id="backEnd" class="cs-select cs-skin-underline" id="backEnd">
                       <option value="" disabled selected>Back-End</option>
-                      <option value="1">Node</option>                     
+                      <option value="Node">Node</option>                     
                     </select>
                   </section>
                   <section class="subTechnology">
-                    <select class="cs-select cs-skin-underline">
+                    <select id ="testing" class="cs-select cs-skin-underline" id="testing">
                       <option value="" disabled selected>Testing</option>
-                      <option value="1">Jasmine</option>
-                      <option value="2">Protractor</option>
-                      <option value="3">Mocha</option>                      
+                      <option value="Jasmine">Jasmine</option>
+                      <option value="Protractor">Protractor</option>
+                      <option value="Mocha">Mocha</option>                      
                     </select>
                   </section>
 
@@ -190,17 +166,17 @@
       <input hidden="" class="answer3" style="color:#444"/>
       <input hidden="" class="answer4" style="color:#444"/>
       <input hidden="" class="answer5" style="color:#444"/>
-      <input type="submit" class="btn btn-default btn-lg hide submit" value="Ready to Send"/>
+      <input type="submit" class="btn btn-default btn-lg hide submit" id="finalSubmit" value="Ready to Send"/>
     </form>
   </div>
 </div>
 </div>
 <div class="animated thanks hide">
-  <h1 style="font-weight:100; font-size:48px; width: 80%; margin: 0 auto;">Thanks for the submission Mark. We'll notify you with some plans based on your needs.</h1>
-  <form action="">
-    <button class="btn btn-lg btn-success" style="margin:20px;" >Let's go play</button>
-  </form>
+  <h1 style="font-weight:100; font-size:48px; width: 80%; margin: 0 auto;">Thanks for the submission 
+    <span class="userName"></span>!. We'll notify you with some plans based on your needs.</h1>
+    <div class="loader"></div>
 </div>
+    <script type="text/javascript" src="../scripts/login.js"></script>
 		<script type="text/javascript" src="../scripts/app.js"></script>
     <script src="../scripts/classie.js"></script>
     <script src="../scripts/selectFx.js"></script>

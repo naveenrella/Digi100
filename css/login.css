@@ -1,5 +1,5 @@
 body {
-  background: #4ABDAC url("https://38.media.tumblr.com/d23deac40b06633b79520a8552f40b94/tumblr_nb1uhrRrge1st5lhmo1_1280.jpg") no-repeat center center fixed;
+  background: #4ABDAC url("https://www.photohdx.com/images/2017/04/vintage-brown-steampunk-gears-background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -78,3 +78,5 @@ body::before {
 .form button:hover {
   background: #369cb8;
 }
+
+.h1-header {font-weight:100; margin-top:0; font-size:36px; background:#e74c3c; padding:25px; margin-left:-10px; width:400px; position:absolute;color:white;}

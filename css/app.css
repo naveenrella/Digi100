@@ -30,7 +30,7 @@ body {
   
 }
 body {
-  background: #44c4e7 url("https://38.media.tumblr.com/d23deac40b06633b79520a8552f40b94/tumblr_nb1uhrRrge1st5lhmo1_1280.jpg") no-repeat center center fixed;
+  background: #44c4e7 url("https://www.photohdx.com/images/2017/04/vintage-brown-steampunk-gears-background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -124,7 +124,8 @@ background-size: cover;
 .inner {
   padding: 30px;
 }
-.break {border-bottom:1px solid #4DB8FF; margin-bottom:15px; padding-bottom:15px}
+.break {border-bottom:1px solid #4DB8FF; margin-bottom:15px; padding-bottom:15px;    font-size: 18px;
+    font-weight: 400;}
 .progress {border-radius:0; height:7px; background-color:#1E6697;  -webkit-box-shadow: none; box-shadow:none;}
 .progress-bar {background-color:#2ecc71; -webkit-box-shadow: none;box-shadow:none; }
 .progress-form {margin:0; padding:0; position:relative; min-height:500px}
@@ -163,10 +164,10 @@ border-radius: 0;
 
 }
 
-.scrollable {overflow-y: scroll;
+/*.scrollable {overflow-y: scroll;
 overflow-wrap: break-word;
 max-height: 500px;
-}
+}*/
 .popover-content {
 padding: 9px 14px;
 font-size:14px;
@@ -385,29 +386,72 @@ border-bottom:1px solid white;
 
 
 .wrapper {
-  width: 500px;
-  height:150px;
-  border: 2px solid white;
-  position:absolute;
-  top:2%;
-  right: 10%;
-  border-radius:10px;
+    display: none;
+    width: 400px;
+    border: 2px 0px 1px 1px solid white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    padding-bottom: 26px;
+    position: absolute;
+    top: 30px;
+    right: 2%;
+    border-radius: 56px;
 }
 
+
+/*.wrapper:hover #userText {
+    transition: 0.5s;
+    left: 0;
+}*/
+
 #userText{
-  font-family: courier, sans-serif;
-  font-size:18px;
-  float: right;
-  margin-right: 20%;
-  margin-top: 3%;
+    font-family: courier, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding-left: 10px;
+    margin-right: 20%;
+    margin-top: 3%;
+    transition: 1s;
 }
 
 .image--cover {
+  position:absolute;
+  top:10;
+  right:10;
   width: 100px;
   height: 100px;
   border-radius: 50%;
   border:3px solid white;
   margin: 20px;
   object-fit: cover;
-  object-position: center right;  
+  object-position: center right;
+  z-index:1;
+}
+
+
+/*loading bar*/
+
+.loader {
+  border: 25px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 25px solid #2ecc71;
+    border-bottom: 25px solid #2ecc71;
+    width: 200px;
+    height: 200px;
+    -webkit-animation: spin 2s linear infinite;
+    position: absolute;
+    left: 45%;
+    top:250px;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

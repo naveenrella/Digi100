@@ -1,4 +1,12 @@
+"use strict";
+
+
+
 $(function() {
+  var loggedUserName  = JSON.parse(localStorage.getItem('loggedUser'));
+  $(".userName").html(loggedUserName.username);
+  document.getElementById("loginDate").innerHTML = "Login date : " + new Date().toLocaleDateString();
+
   $('input.getName').keyup("keyup", function() {
     $('.cName').html($('.getName').val());
   });
@@ -26,33 +34,45 @@ $(function() {
   })
 
   //Initial technology checkbox 
-   	$('.technologyClass').bind('change', function (v) {
-        if($(this).is(':checked')) {
-        	 setTimeout(function(){ $('.nxt').click(); }, 400);            
-        }
-    });
-   	
-    //default extra suggestions  for sub technology
-    $('#q4').hide();
-    $('.subTechnologyClass').bind('change', function (v) {
-    // this will contain a reference to the checkbox   
+ 	$('.technologyClass').bind('change', function (v) {
       if($(this).is(':checked')) {
-          // the checkbox is now checked
-          $('#q4').show()
-      } else {
-        $('#q4').hide()
-          // the checkbox is now no longer checked
+      	 setTimeout(function(){ $('.nxt').click(); }, 400);            
       }
-    });
-   
+  });
+ 	
+  //default extra suggestions  for sub technology
+  $('#q4').hide();
+  $('.subTechnologyClass').bind('change', function (v) {
+  // this will contain a reference to the checkbox   
+    if($(this).is(':checked')) {
+        // the checkbox is now checked
+        $('#q4').show()
+    } else {
+      $('#q4').hide()
+        // the checkbox is now no longer checked
+    }
+  });
   
-  function selectedTechnology(){
-    $('.nxt').click();
-  }
+  // toggle the side view
+
+  $(".image--cover").click(function(){
+    if($(".wrapper").css('display') == 'none'){
+      $(".wrapper").css("display", "block");
+    }else{
+      $(".wrapper").css("display", "none");
+    }
+    
+  })
+     
+  
+  $('#q3').change(function(){ 
+    $('.answer3').html("Technology = " + $('#q3').val() );
+  });
 
   $('.nxt').click(function() {
     $('.nxt').removeClass("fadeInUp").addClass('fadeOutDown');
-
+    $('.answer3').html("Technology = " + $('#q3').val() );
+    $('.answer4').html("Front-End  = " +  $('#frontEnd').val() + ", Backend = " + $('#backEnd').val() + ", Testing = " + $("#testing").val());
     if ($('.progress-form li').hasClass('activate')) {
 
       $('p.alerted').removeClass('fadeInLeft').addClass('fadeOutUp');
@@ -87,27 +107,19 @@ $(function() {
 
   $('#q1').keyup(function() {
     var nameValue = $(this).val();
-    $('.answer1').html(nameValue);
+    $('.answer1').html(" Project Name =  "+ nameValue);
   });
 
   $('#q2').keyup(function() {
     var nameValue = $(this).val();
-    $('.answer2').html(nameValue);
+    $('.answer2').html("Number of resources required = "+ nameValue);
   });
 
-  $('#q3').keyup(function() {
-    var nameValue = $(this).val();
-    $('.answer3').html(nameValue);
-  });
-
-  $('#q4').keyup(function() {
-    var nameValue = $(this).val();
-    $('.answer4').html(nameValue);
-  });
-
-  $('#q5').keyup(function() {
-    var nameValue = $(this).val();
-    $('.answer5').html(nameValue);
+  
+  $("#finalSubmit").click(function(){
+    setTimeout(function(){ 
+       location.replace("../templates/profiles.html")
+    }, 3000);
   });
 
 });
