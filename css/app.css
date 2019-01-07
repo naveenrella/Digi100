@@ -30,7 +30,7 @@ body {
   
 }
 body {
-  background: #44c4e7 url("https://www.photohdx.com/images/2017/04/vintage-brown-steampunk-gears-background.jpg") no-repeat center center fixed;
+  background: #44c4e7 url("../images/appBackground.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
