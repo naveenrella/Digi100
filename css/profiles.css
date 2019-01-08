@@ -78,10 +78,13 @@ body::before {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg");
 }
 .clash-card__image--archer img {
-  width: 400px;
-  position: absolute;
-  top: -34px;
-  left: -37px;
+  width: 150px;
+  height: 150px;
+  border: 2px solid white;
+  border-radius: 50%;
+   position: absolute;
+  top: 75px;
+  left: 70px;
 }
 
 .clash-card__image--giant {
