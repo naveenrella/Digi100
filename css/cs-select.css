@@ -2,9 +2,6 @@
 div.cs-select {
 	display: inline-block;
 	vertical-align: middle;
-	  position: absolute;
-	  top: 81%;
-	  left: 0px;
 	text-align: left;
 	background: #fff;
 	z-index: 100;
@@ -75,7 +72,7 @@ div.cs-active {
 .cs-select .cs-options {
 	position: absolute;
 	overflow: hidden;
-	width: 100%;
+	width: 35%;
 	background: #fff;
 	visibility: hidden;
 }
