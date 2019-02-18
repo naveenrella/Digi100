@@ -2,7 +2,9 @@
 div.cs-select {
 	display: inline-block;
 	vertical-align: middle;
-	position: relative;
+	  position: absolute;
+	  top: 81%;
+	  left: 0px;
 	text-align: left;
 	background: #fff;
 	z-index: 100;

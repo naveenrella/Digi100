@@ -111,9 +111,28 @@ $(function() {
   });
 
   $('#q2').keyup(function() {
+    $('#technology').val($(this).val()) ;
     var nameValue = $(this).val();
     $('.answer2').html("Number of resources required = "+ nameValue);
   });
+
+  $('#technology').change(function() {
+    if(  $('#technology').val() < $('#q2').val() ){      
+      $('#technologyBox').clone().appendTo(".clonedBox");
+      // $('.clonedBox:nth-child(1)').attr('id', 'newClonedInput');
+      // $('.clonedBox:nth-child(2)').attr('id', 'newClonedSelect');
+      var element = $(".clonedBox");
+       var newElement = element.clone();
+        var id = current_id+1;
+        current_id = id;
+        if(id <10)id = "0"+id;
+        newElement.attr("id",element.attr("id").split("_")[0]+"_"+id);
+        var field = $('input', newElement).attr("id");
+        $('input', newElement).attr("id", field.split("_")[0]+"_"+id );
+        newElement.appendTo($("#elements"));
+      $('#0'+id).val($('#q2').val() - $('#technology').val());
+    }
+  })
 
   
   $("#finalSubmit").click(function(){
