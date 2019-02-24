@@ -210,6 +210,24 @@ font-size: 24px;
 }
 
 
+.selectBox{
+  float:left;
+}
+
+.resourceAllocation{
+  float:right;
+}
+/*resource input box*/
+
+.resourceAllocation{
+  width: 100px!important;
+  border: 5px solid white !important;
+  float:right;
+  /*position: absolute;
+  top: 30%;
+  left: 80%;*/
+}
+
 /*
  * Footer
  */

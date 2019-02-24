@@ -87,7 +87,7 @@
                   <!-- Dropdown of technology -->
                   <section id="technologyBox">
                     <button type="button" class="btn btn-xs btn-danger help pull-right" style="margin:5px 0; border-radius: 36px; padding: 3px 10px;" data-toggle="popover" data-placement="top" title="Please call our help-desk if you don't find the technology down here...">?</button>
-                    <select class="cs-select cs-skin-underline" id="q3" >
+                    <select class="cs-select cs-skin-underline selectBox" id="selectBox-0" >
                       <option value="" disabled selected>Choose Technology</option>
                       <option value="Java Script">Java Script</option>
                       <option value="Python">Python</option>
@@ -95,10 +95,9 @@
                       <option value="Java">Java</option>
                       <option value="Ruby on Rails">Ruby on Rails</option>
                     </select>
+                    <input type="text" name="resources" class="resourceAllocation" id="inputField-0" class="form-control" />
                   </section>
-                  <div id="clonedBox"></div>
-                  <!-- <textarea class="form-control" id="q3"  required/></textarea> -->
-                  
+                  <div id="clonedBox"></div>                  
                 </li>
                 <li class="form-group animated hide" data-color="#00AF66"  data-percentage="80%">
                   <label for="exampleInputEmail1">
@@ -179,6 +178,7 @@
 </div>
     <script type="text/javascript" src="../scripts/login.js"></script>
 		<script type="text/javascript" src="../scripts/app.js"></script>
+    <script type="text/javascript" src="../scripts/cloneDiv.js"></script>    
     <script src="../scripts/classie.js"></script>
     <script src="../scripts/selectFx.js"></script>
     <script>
@@ -190,3 +190,5 @@
     </script>
 </body>
 </html>
+
+

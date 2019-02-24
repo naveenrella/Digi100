@@ -65,14 +65,19 @@ $(function() {
   })
      
   
-  $('#q3').change(function(){ 
-    $('.answer3').html("Technology = " + $('#q3').val() );
+  $('#selectBox-0').change(function(){ 
+    $('.answer3').html("Technology = " + $('#selectBox-0').val() );
   });
 
   $('.nxt').click(function() {
-    $('.nxt').removeClass("fadeInUp").addClass('fadeOutDown');
-    $('.answer3').html("Technology = " + $('#q3').val() );
-    $('.answer4').html("Front-End  = " +  $('#frontEnd').val() + ", Backend = " + $('#backEnd').val() + ", Testing = " + $("#testing").val());
+     $('.nxt').removeClass("fadeInUp").addClass('fadeOutDown');
+     $('.answer3').html("Technology = " + $('#selectBox-0').val() );
+     $('.answer4').html("Front-End  = " +  $('#frontEnd').val() + ", Backend = " + $('#backEnd').val() + ", Testing = " + $("#testing").val());
+     $("#inputField-0").val($('#q2').val());
+     if($('#q2').val() !=""){
+       var totalResources = parseInt($('#q2').val());
+     }
+     
     if ($('.progress-form li').hasClass('activate')) {
 
       $('p.alerted').removeClass('fadeInLeft').addClass('fadeOutUp');
@@ -97,11 +102,45 @@ $(function() {
 
       }
 
+      // var counter=0;
+      // $("#inputField-0").blur(function(){ 
+      //   var firstSetResources = parseInt(this.value);   //6
+      //   createAtechnologyBox(counter,totalResources,firstSetResources);
+      // });
+      
+      // function createAtechnologyBox(counter,totalResources,firstSetResources){
+      //   if(totalResources - firstSetResources < 1){
+      //     $("#inputField-"+counter).val(totalResources);
+      //     return;
+      //   }
+      //   counter++;
+      //   var clone = $("#technologyBox").clone();
+      //   var technologyCloneId = "technologyClone-" + counter;
+      //   var selectTagId = "selectBox-" + counter;
+      //   var inputFieldId = "inputField-"+counter;
+      //   var inputFieldValue = (parseInt(totalResources) - parseInt(firstSetResources));
+      //   clone.find("#technologyBox").attr("id",technologyCloneId);
+      //   clone.find("#selectBox-0").attr("id",selectTagId);    
+      //   clone.find("#inputField-0").attr("id",inputFieldId);
+      //   clone.find("#"+inputFieldId).val(inputFieldValue);
+      //   //reset the totalResources
+      //   totalResources = parseInt(totalResources)-parseInt(firstSetResources);
+      //   $("#clonedBox").append(clone);
+      //   clone.find("#"+inputFieldId).bind( "blur",function(){
+      //     createAtechnologyBox(counter,totalResources,parseInt(this.value));
+      //   }); 
+      // } 
+
     } //End Else
 
   });
 
-});
+  // $(document).ready(function(){
+
+    
+  });
+
+// });
 
 $(function() {
 
@@ -115,25 +154,6 @@ $(function() {
     var nameValue = $(this).val();
     $('.answer2').html("Number of resources required = "+ nameValue);
   });
-
-  $('#technology').change(function() {
-    if(  $('#technology').val() < $('#q2').val() ){      
-      $('#technologyBox').clone().appendTo(".clonedBox");
-      // $('.clonedBox:nth-child(1)').attr('id', 'newClonedInput');
-      // $('.clonedBox:nth-child(2)').attr('id', 'newClonedSelect');
-      var element = $(".clonedBox");
-       var newElement = element.clone();
-        var id = current_id+1;
-        current_id = id;
-        if(id <10)id = "0"+id;
-        newElement.attr("id",element.attr("id").split("_")[0]+"_"+id);
-        var field = $('input', newElement).attr("id");
-        $('input', newElement).attr("id", field.split("_")[0]+"_"+id );
-        newElement.appendTo($("#elements"));
-      $('#0'+id).val($('#q2').val() - $('#technology').val());
-    }
-  })
-
   
   $("#finalSubmit").click(function(){
     setTimeout(function(){ 
